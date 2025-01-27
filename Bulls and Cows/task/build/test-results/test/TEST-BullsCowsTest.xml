@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BullsCowsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-01-27T11:45:42" hostname="DESKTOP-5V9GP26" time="0.072">
+  <properties/>
+  <testcase name="start" classname="BullsCowsTest" time="0.072"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+The secret code is prepared: ****.
+> 3601
+Grade: 1 bull(s) and 1 cow(s). The secret code is 9305.
+?[0;34mWhy 9305? Make your own secret number :)
+?[1;31m
+Start test 2?[0m
+The secret code is prepared: ****.
+> 9305
+Grade: 4 bull(s). The secret code is 9305.
+?[0;34mWhy 9305? Make your own secret number :)
+?[1;31m
+Start test 3?[0m
+The secret code is prepared: ****.
+> 1246
+Grade: None. The secret code is 9305.
+?[0;34mWhy 9305? Make your own secret number :)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
