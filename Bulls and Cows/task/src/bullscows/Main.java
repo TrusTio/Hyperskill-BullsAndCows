@@ -5,7 +5,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-// Completed Stage 4/7  - https://hyperskill.org/projects/53/stages/290/implement
+// Completed Stage 5/7  - https://hyperskill.org/projects/53/stages/290/implement
+// Collections.shuffle uses Math.random under the hood anyway so no changes necessary...
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
