@@ -8,5 +8,8 @@ files:
     visible: false
     learner_created: false
 feedback_link: https://hyperskill.org/learn/step/5432#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 28 Jan 2025 10:13:16 UTC"
 record: -1
