@@ -2,14 +2,13 @@ package bullscows;
 
 import java.util.*;
 
-/* Completed Stage 6/7  - https://hyperskill.org/projects/53/stages/292/implement
+/* Completed Stage 7/7  - https://hyperskill.org/projects/53/stages/293/implement
 Objectives
-In this step, your program should:
-1. Ask for the length of the secret code.
-2. Ask for the range of possible symbols in the secret code.
-3. Generate a secret code using numbers and characters. This time, you should also print the secret code
-using * characters  and print which symbols were used to generate the secret code.
-4. Function as a fully playable game.
+In this stage, your program should:
+Handle incorrect input.
+Print an error message that contains the word error.
+After that, don't ask for the numbers again, just finish the program.
+P.S. - What a terrible objective/way to handle errors...
 */
 public class Main {
     public static void main(String[] args) {
@@ -24,8 +23,12 @@ public class Main {
             int possibleSymbolCount = scanner.nextInt();
             scanner.nextLine();
 
-            if (codeLength > 36) {
-                System.out.println("Error: can't generate a secret number with a length of 36 because there aren't enough unique digits and letters.");
+            if (codeLength > 36 || codeLength<1) {
+                System.out.println("Error: Code length should be 1-36 symbols");
+                System.exit(0);
+            } else if (codeLength > possibleSymbolCount) {
+                System.out.println("Error: it's not possible to generate a code with a length of "
+                        + codeLength + " with " + possibleSymbolCount + " unique symbols.");
             } else {
                 secretCode = randomCodeGenerator(codeLength, possibleSymbolCount);
                 System.out.println("Okay, let's start a game!");
@@ -48,7 +51,7 @@ public class Main {
      * Generates a random Secret Code given a length and number of possibly symbols.
      *
      * @param length               length of the code.
-     * @param possibleSymbolsCount allowed symbols, if <=10 -> only numbers, >10 alphabetical letters. E.g 11 will be numbers + 'a'
+     * @param possibleSymbolsCount allowed symbols, if <=10 -> only numbers, >10 alphabetical letters. E.g. 11 will be numbers + 'a'
      * @return String code
      */
     public static String randomCodeGenerator(int length, int possibleSymbolsCount) {
@@ -77,9 +80,10 @@ public class Main {
         return result.toString();
     }
 
-    /** Checks the number of cows and bulls in a secretCode given the user input
+    /**
+     * Checks the number of cows and bulls in a secretCode given the user input
      *
-     * @param secretCode the secretCode to compare the input to and for check cows and bulls
+     * @param secretCode   the secretCode to compare the input to and for check cows and bulls
      * @param guesserInput the input compared to the secret code
      * @return String of cows and bulls
      */
